@@ -1,0 +1,288 @@
+{ execInterrupt:
+   command {
+     name: 'execInterrupt',
+     action_name: '-exec-interrupt',
+     params: [] },
+  run: command { name: 'run', action_name: '-exec-run', params: [] },
+  step: command { name: 'step', action_name: '-exec-step', params: [] },
+  stepInstruction:
+   command {
+     name: 'stepInstruction',
+     action_name: '-exec-step-instruction',
+     params: [] },
+  next: command { name: 'next', action_name: '-exec-next', params: [] },
+  jump:
+   command {
+     name: 'jump',
+     action_name: '-exec-jump',
+     params: [ [commandParam] ] },
+  execUntil:
+   command {
+     name: 'execUntil',
+     action_name: '-exec-until',
+     params: [ [commandParam] ] },
+  continue:
+   command {
+     name: 'continue',
+     action_name: '-exec-continue',
+     params: [ [commandParam] ] },
+  finish: command { name: 'finish', action_name: '-exec-finish', params: [] },
+  breakAfter:
+   command {
+     name: 'breakAfter',
+     action_name: '-break-after',
+     params: [ [commandParam], [commandParam] ] },
+  breakCommand:
+   command {
+     name: 'breakCommand',
+     action_name: '-break-command',
+     params: [ [commandParam], [commandParam] ] },
+  breakCondition:
+   command {
+     name: 'breakCondition',
+     action_name: '-break-condition',
+     params: [ [commandParam], [commandParam] ] },
+  breakDelete:
+   command {
+     name: 'breakDelete',
+     action_name: '-break-delete',
+     params: [ [commandParam] ] },
+  breakDisable:
+   command {
+     name: 'breakDisable',
+     action_name: '-break-disable',
+     params: [ [commandParam] ] },
+  breakEnable:
+   command {
+     name: 'breakEnable',
+     action_name: '-break-enable',
+     params: [ [commandParam] ] },
+  breakInfo:
+   command {
+     name: 'breakInfo',
+     action_name: '-break-info',
+     params: [ [commandParam] ] },
+  breakList: command { name: 'breakList', action_name: '-break-list', params: [] },
+  breakInsert:
+   command {
+     name: 'breakInsert',
+     action_name: '-break-insert',
+     params:
+      [ [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam] ] },
+  dprintf:
+   command {
+     name: 'dprintf',
+     action_name: '-dprintf-insert',
+     params:
+      [ [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam],
+        [commandParam] ] },
+  breakPasscount:
+   command {
+     name: 'breakPasscount',
+     action_name: '-break-passcount',
+     params: [ [commandParam], [commandParam] ] },
+  watch:
+   command {
+     name: 'watch',
+     action_name: '-break-watch',
+     params: [ [commandParam], [commandParam], [commandParam] ] },
+  catchLoad:
+   command {
+     name: 'catchLoad',
+     action_name: '-catch-load',
+     params: [ [commandParam], [commandParam], [commandParam] ] },
+  catchUnload:
+   command {
+     name: 'catchUnload',
+     action_name: '-catch-unload',
+     params: [ [commandParam], [commandParam], [commandParam] ] },
+  setArg:
+   command {
+     name: 'setArg',
+     action_name: '-exec-arguments',
+     params: [ [commandParam] ] },
+  setWorkingDirectory:
+   command {
+     name: 'setWorkingDirectory',
+     action_name: '-environment-cd',
+     params: [ [commandParam] ] },
+  setSourcePath:
+   command {
+     name: 'setSourcePath',
+     action_name: '-environment-directory',
+     params: [ [commandParam], [commandParam] ] },
+  setObjectPath:
+   command {
+     name: 'setObjectPath',
+     action_name: '-environment-path',
+     params: [ [commandParam], [commandParam] ] },
+  pwd: command { name: 'pwd', action_name: '-environment-pwd', params: [] },
+  threadInfo:
+   command {
+     name: 'threadInfo',
+     action_name: '-thread-info',
+     params: [ [commandParam] ] },
+  threadListIds:
+   command {
+     name: 'threadListIds',
+     action_name: '-thread-list-ids',
+     params: [] },
+  threadSelect:
+   command {
+     name: 'threadSelect',
+     action_name: '-thread-select',
+     params: [ [commandParam] ] },
+  frame: command { name: 'frame', action_name: '-stack-info-frame', params: [] },
+  stackDepth:
+   command {
+     name: 'stackDepth',
+     action_name: '-stack-info-depth',
+     params: [ [commandParam] ] },
+  stackListArguments:
+   command {
+     name: 'stackListArguments',
+     action_name: '-stack-list-arguments',
+     params: [ [commandParam], [commandParam], [commandParam] ] },
+  stackListFrames:
+   command {
+     name: 'stackListFrames',
+     action_name: '-stack-list-frames',
+     params: [ [commandParam] ] },
+  stackListLocals:
+   command {
+     name: 'stackListLocals',
+     action_name: '-stack-list-locals',
+     params: [ [commandParam], [commandParam] ] },
+  stackListVariables:
+   command {
+     name: 'stackListVariables',
+     action_name: '-stack-list-variables',
+     params: [ [commandParam], [commandParam] ] },
+  frameSelect:
+   command {
+     name: 'frameSelect',
+     action_name: '-stack-select-frame',
+     params: [ [commandParam] ] },
+  symbolList:
+   command {
+     name: 'symbolList',
+     action_name: '-symbol-list-lines',
+     params: [ [commandParam] ] },
+  executableAndSymbols:
+   command {
+     name: 'executableAndSymbols',
+     action_name: '-file-exec-and-symbols',
+     params: [ [commandParam] ] },
+  executable:
+   command {
+     name: 'executable',
+     action_name: '-file-exec-file',
+     params: [ [commandParam] ] },
+  symbols:
+   command {
+     name: 'symbols',
+     action_name: '-file-symbol-file',
+     params: [ [commandParam] ] },
+  sourceCtx:
+   command {
+     name: 'sourceCtx',
+     action_name: '-file-list-exec-source-file',
+     params: [] },
+  listSourceFiles:
+   command {
+     name: 'listSourceFiles',
+     action_name: '-file-list-exec-source-files',
+     params: [] },
+  attach:
+   command {
+     name: 'attach',
+     action_name: '-target-attach',
+     params: [ [commandParam] ] },
+  detach:
+   command {
+     name: 'detach',
+     action_name: '-target-detach',
+     params: [ [commandParam] ] },
+  disconnect:
+   command {
+     name: 'disconnect',
+     action_name: '-target-disconnect',
+     params: [] },
+  download: command { name: 'download', action_name: '-target-download', params: [] },
+  targetSelect:
+   command {
+     name: 'targetSelect',
+     action_name: '-target-select',
+     params: [ [commandParam], [commandParam] ] },
+  commandExists:
+   command {
+     name: 'commandExists',
+     action_name: '-info-gdb-mi-command',
+     params: [ [commandParam] ] },
+  listFeature:
+   command {
+     name: 'listFeature',
+     action_name: '-list-features',
+     params: [] },
+  listTargetFeature:
+   command {
+     name: 'listTargetFeature',
+     action_name: '-list-target-features',
+     params: [] },
+  exit: command { name: 'exit', action_name: '-gdb-exit', params: [] },
+  set:
+   command {
+     name: 'set',
+     action_name: '-gdb-set',
+     params: [ [commandParam], [commandParam] ] },
+  show:
+   command {
+     name: 'show',
+     action_name: '-target-select',
+     params: [ [commandParam] ] },
+  version: command { name: 'version', action_name: '-gdb-version', params: [] },
+  listThreadGroups:
+   command {
+     name: 'listThreadGroups',
+     action_name: '-list-thread-groups',
+     params: [ [commandParam], [commandParam], [commandParam] ] },
+  os:
+   command {
+     name: 'os',
+     action_name: '-info-os',
+     params: [ [commandParam] ] },
+  addInferior: command { name: 'addInferior', action_name: '-add-inferior', params: [] },
+  exec:
+   command {
+     name: 'exec',
+     action_name: '-interpreter-exec',
+     params: [ [commandParam], [commandParam] ] },
+  ttySet:
+   command {
+     name: 'ttySet',
+     action_name: '-inferior-tty-set',
+     params: [ [commandParam] ] },
+  ttyShow:
+   command {
+     name: 'ttyShow',
+     action_name: '-inferior-tty-show',
+     params: [] },
+  enableTimings:
+   command {
+     name: 'enableTimings',
+     action_name: '-enable-timings',
+     params: [ [commandParam] ] } }
