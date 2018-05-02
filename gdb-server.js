@@ -10,7 +10,7 @@ app.put('/process/:pid/runtime-info', (req, res, next) => {
                 res.json(e).end();
             }, {target:req.params.pid});
         }, (e) => {
-            // res.json(e);
+            res.json(e);
         });
     }, {target:req.params.pid});
 });
