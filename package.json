@@ -12,7 +12,7 @@
     "cross-spawn": "^5.1.0",
     "express": "^4.16.3",
     "gdb-js": "latest",
-    "ngdbmi": "0.0.4",
+    "ngdbmi": "github:dezmound/ngdbmi#dev",
     "utf8": "^2.1.2"
   }
 }
